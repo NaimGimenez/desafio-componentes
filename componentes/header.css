@@ -1,0 +1,77 @@
+/* Estilos del Header */
+.header {
+  width: 100%;
+  height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: rgb(8, 8, 6);
+  padding: 0px 30px;
+}
+
+.logo_header{
+  border-radius: 20%;
+}
+
+/* Menú desplegable */
+.titulos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgb(8, 8, 6);
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+/* Cuando el menú se abre */
+.menu-despegable {
+  height: 400px; /* Se expande al abrir */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/* Estilos de los enlaces del menú */
+.titulos-menu {
+  color: beige;
+  margin: 20px 0;
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Estilos del botón para cerrar el menú */
+.menu-cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Icono del menú */
+.menu-icono {
+  cursor: pointer;
+}
+
+/* ============================= */
+/* 🔥 Ocultar la imagen del cohete cuando el menú está abierto */
+/* ============================= */
+.cohete {
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1; /* Normalmente visible */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Ocultar o mover la imagen del cohete cuando el menú está abierto */
+.menu-abierto .cohete {
+  opacity: 0; /* Desaparece */
+  transform: translateY(50px); /* Se mueve hacia abajo */
+}
+
+
