@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* aqui empieza el componente de footer*/
 
@@ -72,4 +73,80 @@
     justify-content: center;
     margin-top: 30px;
     
+=======
+
+/* aqui empieza el componente de footer*/
+
+.footer-custom{
+    background-color:rgb(23, 26, 53);
+    height: 600px;
+    width: 100%;
+    padding-top: 40px;
+  
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+  }
+  
+  .logo_footer{
+    width: 100%;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenedor_secciones {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .secciones {
+    height: auto;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .secciones li {
+    margin: 3px 0;
+    padding: 5px;
+  }
+  
+  
+  
+  
+  .redes {
+    height: 70px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 40px;
+  }
+  
+  .paginas_sociales{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+  
+    cursor: pointer;
+  }
+  
+  
+  .direccion{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+>>>>>>> cf28a74 (ultimas actualizaciones)
   }

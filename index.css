@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   margin: 0;
   box-sizing: border-box;
@@ -123,3 +124,210 @@ body{
   font-weight: 500;
 }
 
+=======
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body{
+  width: 375px;
+ 
+  background-color: rgb(11, 11, 24);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+@media(min-width:375px){
+  body{
+    width:100%;
+  }
+}
+ 
+
+.home{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 30px;
+}
+@media(min-width:375px){
+  .home{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+  }
+}
+
+.titulo_home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo_hola{
+  -webkit-text-fill-color: antiquewhite;
+  
+}@media(min-width:375px){
+  .titulo_hola{
+    width:100%;
+    font-size: 60px;
+  }
+}
+.titulo_naim{
+  -webkit-text-fill-color: aqua;
+}
+
+.cohete{
+  padding-bottom: 20px;
+}@media(min-width:375px){
+  .cohete{
+    width:100%;
+    height: 100%;
+  }
+}
+
+/* aqui empieza la presentacion */
+.presentacion{
+  background-color: rgb(23, 26, 53);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px;
+  gap: 10px;
+}@media(min-width:375px){
+  .presentacion{
+    width:100%;
+    height: 500px;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+}@media(min-width:375px){
+  .container_uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.presentacion_image{
+    object-fit:fill;
+    
+}@media(min-width:375px){
+  .presentacion_image{
+    width:100%;
+  }
+}
+
+.titulo_presentacion{
+ 
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  -webkit-text-fill-color: aliceblue;
+}@media(min-width:375px){
+  .titulo_presentacion{
+    
+     width:200px;
+     height: 60px;
+     font-size: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+}
+.presentacion_descripcion{
+  -webkit-text-fill-color: rgb(167, 167, 167);
+}@media(min-width:375px){
+  .presentacion_descripcion{
+   
+    width: 800px;
+    height: 160px;
+
+    text-align: center;
+    
+    padding: 30px;
+   
+  }
+}
+
+/* aqui empieza Mis Servicios */
+
+.content_mis_servicios{
+  background: url(doodle\ items.png);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}@media(min-width:375px){
+  .content_mis_servicios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 1fr;
+    
+  }
+}
+
+.content_card_servcios{
+   background-color: rgba(163, 163, 128, 0.11);
+   border-radius: 15px;
+   padding: 30px;
+}
+
+.titulo_servicios{
+  -webkit-text-fill-color: aliceblue;
+  margin-left: 90px;
+  height: 40px;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-size: 20px;
+}@media(min-width:375px){
+  .titulo_servicios{
+      grid-column:1/4 ;
+      text-align: center;
+
+      font-size: 40px;
+  }
+}
+
+.content_mis_servicios{
+  padding: 50px 40px 40px 40px;
+}
+
+.imagen_card_servicios{
+  padding: 20px;
+  border-radius: 10%;
+}
+
+.subtitulo_servicios{
+
+  width: 100%;
+  -webkit-text-fill-color: aliceblue;
+  font-weight: 900;
+ 
+  margin-bottom: 20px;
+
+  /* tamaño de letras */
+  font-size: 20px;
+  /* modificacion de la ubicacion del titulo */
+  text-align: center;
+}
+
+.descripcion_servicios { 
+  
+  width: 100%;
+  text-align:start;
+  -webkit-text-fill-color: rgb(127, 138, 150);
+  font-weight: 500;
+}
+
+>>>>>>> cf28a74 (ultimas actualizaciones)

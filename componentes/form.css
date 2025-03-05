@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* aca empieza el formulario  */
 
 .escribime{
@@ -15,3 +16,110 @@
     width:100%;
    
   }
+=======
+/* aca empieza el formulario  */
+@media(min-width:375px){
+  .titulo_formulario{
+  font-family: "Poppins",serif;
+  font-size: 60px;
+
+  text-align: center;
+  -webkit-text-fill-color: aliceblue;
+  
+}
+}
+
+@media(min-width:375px){
+.form_titulo{
+  margin-top:70px ;
+}
+}
+
+
+
+.escribime{
+    padding: 30px;
+  }
+  @media(min-width:375px){
+    .escribime{
+      height: 500px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  .label_form {
+    -webkit-text-fill-color: aliceblue;
+  } 
+  
+  @media(min-width:375px){
+    .media-name {
+        grid-column: 1/3;
+    }
+  }
+  
+  .boton_enviar{
+    width:100%
+  }
+  .container_boton_enviar{
+    width:100%;
+   
+  }
+
+  @media(min-width:375px){
+    .formulario{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: 200px 1fr 1fr;
+
+    }
+  }
+  
+  @media(min-width:375px){
+   .container_inputs{
+    display:grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(4,100px);
+      
+       grid-row: 1/4;
+       grid-column: 1/4;
+       padding : 0px 0px 30px 0px;
+       gap: 10px;
+  }}
+
+  @media(min-width:375px){
+    .field-name {
+     grid-column: 1/3;
+     grid-row: 1/2;
+    }
+  }
+
+  @media (min-width:375px){
+    .field-email{
+      grid-column: 3/6;
+      grid-row: 1/2;
+      width: 270px;
+     
+  }}
+  
+  @media (min-width:375px){
+    .field-textarea{
+      grid-column: 1/6;
+      grid-row: 2/4;
+      width: 490px;
+            
+  }}
+
+  @media (min-width:375px){
+    .container_boton_enviar{
+      grid-column: 2/5;
+      width: 100%;
+      height: 120px;
+
+      margin-top:-60px;
+      padding: 30px;
+      
+  }}
+
+ 
+>>>>>>> cf28a74 (ultimas actualizaciones)
