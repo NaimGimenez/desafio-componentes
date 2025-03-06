@@ -10,6 +10,10 @@ body{
     width: 375px;
     height: auto;
 
+  }@media(min-width:375px){
+    body{
+        width: 100%;
+    }
   }
   
 
@@ -21,6 +25,12 @@ body{
     display :flex;
     flex-direction: column;
     justify-content: space-evenly; 
+}
+@media(min-width:375px){
+    .mis_Trabajos{
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 
@@ -70,7 +80,7 @@ body{
     
     background: url(/doodle\ items.png ), rgb(0, 0, 12);
     height: auto;
-    
+   
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +89,12 @@ body{
     gap:20px;
 
     -webkit-text-fill-color: aliceblue;
+}@media(min-width:375px){
+    .content_trabajos{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
 }
 
 .field_card_trabajos{

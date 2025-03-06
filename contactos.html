@@ -26,7 +26,7 @@
      <link rel="stylesheet" href="componentes/header.css">
     <script defer src="componentes/header.js"></script>
     <link rel="stylesheet" href="componentes/footer.css">
-    <link rel="stylesheet" href="/componentes/footer.css">
+    
     <!-- linkcss de contactos -->
     <link rel="stylesheet" href="contactos.css">
     <script defer src="contactos.js"></script>
@@ -62,43 +62,40 @@
   </section>
 
 
+  <section class="escribime" id="contacto">
+    <div class="titulo_formulario">
+   <h2 class="form_titulo">Escribime</h2>  
+   </div>
   
-<section class="escribime" >
-
-  <form id="contacto">
-    <div class="field">
-        <label class="label label_form">Nombre</label>
-        <div class="control">
-            <input class="input" type="text" name="nombre" placeholder="e.g Alex Smith" required>
-        </div>
-    </div>
-    
-    <div class="field">
-        <label class="label label_form">Email</label>
-        <div class="control">
-            <input class="input" type="email"  name="email" placeholder="e.g. alexsmith@gmail.com" required>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label label_form">Mensaje</label>
-        <div class="control">
-            <textarea class="textarea" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-    </div>
-
-    <div class="field is-horizontal container_boton_enviar">
-      <button type="submit" class="button is-primary is-fullwidth" id="enviar-btn">
-          <span class="button-text">Enviar mensaje</span>
-          <span class="button-spinner" style="display: none;">
-              <i class="fas fa-spinner fa-spin"></i>
-          </span>
-      </button>
-  </div>
+  <form class="formulario">
+  <div  class="container_inputs">
+  <div class="field-name">
+     <label class="label  label_form">Name</label>
+     <div class="control">
+       <input class="input" name="name"type="text" placeholder="e.g Alex Smith">
+     </div>
+   </div>
+   
+   <div class="field-email">
+     <label class="label  label_form">Email</label>
+     <div class="control">
+       <input class="input" name="email"type="email" placeholder="e.g. alexsmith@gmail.com">
+     </div>
+   </div>
   
-</form>
-
-</section>
+   <div class="field-textarea">
+     <label class="label label_form">Message</label>
+     <div class="control">
+       <textarea class="textarea" name="mensaje" placeholder="Textarea"></textarea>
+     </div>
+   </div>
+  
+   <div class="field is-horizontal container_boton_enviar">
+           <button class="button is-primary is-fullwidth">send message</button>
+   </div>
+  </div>    
+  
+  </section>
 
  <div class="separador">
          

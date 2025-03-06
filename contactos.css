@@ -8,7 +8,15 @@ body{
     width: 375px;
     height: auto;
     background-color:rgb(23, 26, 53);
+}@media(min-width:375px){
+    body {
+        width:100% ;
+    }
 }
+@media(min-width:375px){
+    
+}
+
 
 /* modificacion del header  */
 
@@ -23,6 +31,10 @@ body{
     display: none; /* Oculto por defecto */
     flex-direction: column;
     padding: 20px;
+}@media(min-width:375px){
+    .titulos{
+        width: 100%;
+    }
 }
 
 .titulos.activo {

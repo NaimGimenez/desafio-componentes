@@ -1,6 +1,6 @@
 
 
-function main(){
+
     document.addEventListener("DOMContentLoaded", () => {
         const menuIcono = document.querySelector(".menu-icono");
         const menu = document.querySelector(".titulos");
@@ -15,87 +15,121 @@ function main(){
         });
     });
     
-    // envio del formulario
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector("#contacto");
-        const submitButton = document.querySelector("#enviar-btn");
-        const buttonText = submitButton.querySelector(".button-text");
-        const buttonSpinner = submitButton.querySelector(".button-spinner");
-    
-        if (!form) return; // Evita errores si el formulario no existe
-    
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault(); // Evita que la página se recargue
-    
-            // Mostrar spinner y ocultar texto del botón
-            buttonText.style.display = "none";
-            buttonSpinner.style.display = "inline-block";
-            submitButton.disabled = true; // Evita múltiples envíos
-    
-            // Capturar los datos del formulario
-            const name = form.querySelector('input[name="nombre"]').value.trim();
-            const email = form.querySelector('input[name="email"]').value.trim();
-            const message = form.querySelector('textarea[name="mensaje"]').value.trim();
-    
-            // Validar que los campos no estén vacíos
-            if (!name || !email || !message) {
-                alert("Por favor, completa todos los campos.");
-                resetButton();
-                return;
+   // aqui va el FORMULARIO
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".formulario"); // Selecciona el formulario
+    const submitButton = document.querySelector(".button"); // Selecciona el botón de enviar
+  
+    if (!form || !submitButton) return; // Evita errores si el formulario o el botón no existen
+  
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+  
+        // Capturar los datos del formulario
+        const nameInput = form.querySelector('input[name="name"]');
+        const emailInput = form.querySelector('input[name="email"]');
+        const messageInput = form.querySelector('textarea[name="mensaje"]');
+  
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+  
+        let isValid = true;
+  
+        // Función para mostrar mensaje de error
+        const showError = (input, message) => {
+            let errorElement = input.nextElementSibling;
+            if (!errorElement || !errorElement.classList.contains("error-message")) {
+                errorElement = document.createElement("p");
+                errorElement.classList.add("error-message");
+                errorElement.style.color = "red";
+                errorElement.style.fontSize = "14px";
+                errorElement.style.marginTop = "5px";
+                input.parentNode.appendChild(errorElement);
             }
-    
-            // Validar email con una expresión regular
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert("Por favor, ingresa un email válido.");
-                resetButton();
-                return;
+            errorElement.textContent = message;
+        };
+  
+        // Función para eliminar mensaje de error cuando el usuario empieza a escribir
+        const removeError = (input) => {
+            let errorElement = input.nextElementSibling;
+            if (errorElement && errorElement.classList.contains("error-message")) {
+                errorElement.remove();
             }
-    
-            // Construir el body del request
-            const data = {
-                to: "naimquintero90@gmail.com", // Reemplázalo con tu email
-                message: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`
-            };
-    
-            try {
-                // Enviar solicitud POST a la API
-                const response = await fetch("https://apx.school/api/utils/email-to-student", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(data)
-                    
-                });
-                
-                console.log("Response completa:", response);
-
-                const result = await response.json(); // Intentar leer la respuesta
-    
-
-                console.log("Resultado del servidor:", result);
-
-                if (response.ok) {
-                    alert("¡El mensaje fue enviado con éxito!");
-                    form.reset(); // Limpia el formulario después del envío
-                } else {
-                    alert(`Error: ${result.error || "Hubo un problema al enviar el mensaje."}`);
-                }
-            } catch (error) {
-                console.error("Error al enviar el mensaje:", error);
-                alert("Hubo un error en la conexión. Inténtalo más tarde.");
+        };
+  
+        // Validar cada campo y mostrar mensaje si está vacío
+        if (!name) {
+            showError(nameInput, "Por favor, ingresa tu nombre.");
+            isValid = false;
+        } else {
+            removeError(nameInput);
+        }
+  
+        if (!email) {
+            showError(emailInput, "Por favor, ingresa tu email.");
+            isValid = false;
+        } else {
+            removeError(emailInput);
+        }
+  
+        if (!message) {
+            showError(messageInput, "Por favor, escribe un mensaje.");
+            isValid = false;
+        } else {
+            removeError(messageInput);
+        }
+  
+        // Validar email con expresión regular
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email && !emailRegex.test(email)) {
+            showError(emailInput, "Por favor, ingresa un email válido.");
+            isValid = false;
+        } else if (email) {
+            removeError(emailInput);
+        }
+  
+        // Si hay errores, no enviar el formulario
+        if (!isValid) return;
+  
+        // Construir el cuerpo del request
+        const data = {
+            to: "naimquintero90@gmail.com", // Reemplázalo con tu email real
+            message: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`
+        };
+  
+        // Deshabilitar el botón para evitar envíos múltiples
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
+  
+        try {
+            // Enviar solicitud POST a la API
+            const response = await fetch("https://apx.school/api/utils/email-to-student", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+  
+            if (response.ok) {
+                alert("¡El mensaje fue enviado con éxito!");
+                form.reset(); // Limpia el formulario después del envío
+            } else {
+                alert("Hubo un problema al enviar el mensaje.");
             }
-           
+        } catch (error) {
+            console.error("Error al enviar el mensaje:", error);
+            alert("Hubo un error en la conexión. Inténtalo más tarde.");
+        } finally {
             // Restaurar el botón después del envío
-            resetButton();
-        });
-    
-        function resetButton() {
-            buttonText.style.display = "inline-block";
-            buttonSpinner.style.display = "none";
-            submitButton.disabled = false; // Habilita nuevamente el botón
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
         }
     });
-}
+  
+    // Remover errores cuando el usuario empieza a escribir en los inputs
+    form.querySelectorAll("input, textarea").forEach((input) => {
+        input.addEventListener("input", () => removeError(input));
+    });
+  });
 
 
-main()

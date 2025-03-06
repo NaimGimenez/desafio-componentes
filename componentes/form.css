@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-/* aca empieza el formulario  */
 
-.escribime{
-    padding: 30px;
-  }
-  
-  .label_form{
-    -webkit-text-fill-color: aliceblue;
-  }
-  
-  .boton_enviar{
-    width:100%
-  }
-  .container_boton_enviar{
-    width:100%;
-   
-  }
-=======
 /* aca empieza el formulario  */
 @media(min-width:375px){
   .titulo_formulario{
@@ -122,4 +104,4 @@
   }}
 
  
->>>>>>> cf28a74 (ultimas actualizaciones)
+
