@@ -17,7 +17,7 @@ body {
   margin: 0 auto;
 }@media(min-width:376px){
   body{
-    width: 1440px;
+    width: 100%;
     flex-wrap: wrap;
   }
 }

@@ -14,10 +14,12 @@
   }
   
   .logo_footer{
-    width: 100%;
-    border-radius: 20%;
     display: flex;
     justify-content: center;
+  }
+ 
+  .imagen_logo_footer{
+    border-radius: 60px;
   }
   
   .contenedor_secciones {
