@@ -24,7 +24,6 @@ body {
 
 /* Media Query para pantallas mayores a 375px */
 
-
   .home {
     width: 100%;
     display: flex;
@@ -56,7 +55,6 @@ body {
       margin-left:130px ;
     }
   }
-
 
 /* aqui empieza la presentacion */
  
@@ -114,8 +112,7 @@ body {
      margin-top: 200px;
      width: 200px;
     }
-  }
-  
+  } 
 
   .titulo_presentacion {
     -webkit-text-fill-color: aliceblue;
@@ -147,9 +144,6 @@ body {
     text-align: center;
     font-size: 40px;
   }
-
-
-
 
 /* Sección de servicios */
 .servicios_control {
@@ -195,7 +189,6 @@ body {
   width: 100%;
 } 
 }
-
 
 .titulo_servicios {
   -webkit-text-fill-color: aliceblue;
