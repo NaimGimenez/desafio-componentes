@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
 
 <!-- componentes -->
+ <link rel="stylesheet" href="componentes/form.css">
  <link rel="stylesheet" href="componentes/header.css">
 <script defer src="componentes/header.js"></script>
 <link rel="stylesheet" href="componentes/footer.css">
@@ -76,6 +77,8 @@
    </div>
 </template>
 
+<!-- AQUI EMPIEZA EL SECTION PRESENTACION -->
+
 <section class="presentacion_control">  
   <div class="content_presentacion">
   
@@ -84,18 +87,21 @@
 
 
 <template id="content_presentacion_template">
-   <div class="presentacion">
-    <div class="container_uno">
-       <h2 class="titulo_presentacion">Soy naim</h2>
-      <p class="presentacion_descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestiae commodi officia a, nostrum quibusdam voluptatem soluta. Aliquam modi voluptatem, eius laudantium atque assumenda. Esse quo odio reiciendis provident totam.</p>
-      </div>
+  <div class="presentacion">
+     <div class="container_uno">
+        <h2 class="titulo_presentacion">Soy naim</h2>
+        <p class="presentacion_descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestiae commodi officia a, nostrum quibusdam voluptatem soluta. Aliquam modi voluptatem, eius laudantium atque assumenda. Esse quo odio reiciendis provident totam.</p>
+     </div >
      <img src="./Captura de pantalla 2025-02-09 120552.png" alt="" class="presentacion_image image is-128x128">
-   </div>
+  </div>
 </template>
 
-<section class="servivios_control">
+
+<!-- aui empieza la section SERVICIOS -->
+<section class="servicios_control">
+   <h2 class="titulo_servicios">Mis Servicios</h2>
   <div class="content_mis_servicios"  id="servicios">
-  <h2 class="titulo_servicios">Mis Servicios</h2>
+ 
 </div>
 </section>
 
@@ -116,7 +122,7 @@
  </div>
 
 <form class="formulario">
-<div  class="container_inputs">
+   <div  class="container_inputs">
 <div class="field-name">
    <label class="label  label_form">Name</label>
    <div class="control">
@@ -141,7 +147,9 @@
  <div class="field is-horizontal container_boton_enviar">
          <button class="button is-primary is-fullwidth">send message</button>
  </div>
-</div>    
+</div>       
+</form>
+
 
 </section>
 
@@ -200,7 +208,7 @@
              
         </div>
 
-  </form>
+ 
   
       </section>
 </body>
